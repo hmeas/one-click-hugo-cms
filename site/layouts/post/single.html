@@ -1,6 +1,9 @@
 {{ define "main" }}
 
-  <div class="mw6 center ph3 pv4">
+  <div id="view-post" class="mw6 center ph3 pv4" v-cloak>
+
+    <h1>GENERATED VIA HUGO:</h1>
+
     <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
     <div class="flex justify-between grey-3">
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
@@ -11,5 +14,52 @@
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </div>
+
+    <hr>
+
+    <h1>RENDERED VIA VUE:</h1>
+
+    <h1 class="f2 lh-title b mb3">{{ "{{hugo.Title}}" }}</h1>
+    <div class="flex justify-between grey-3">
+      <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
+      <p>Read in {{ "{{hugo.ReadingTime}}" }} minutes</p>
+    </div>
+    <div class="cms mw6">
+      <p>{{ "{{hugo.Description}}" }}</p>
+      <img v-if="hugo.Params.image" :src="hugo.Params.image" :alt="hugo.Title" />
+      <span v-html="hugo.Content"></span>
+    </div>
+
   </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#view-post',
+      data: {
+        hugo: {{ . }},
+        testing: 'THIS IS A TEST!',
+        someData: [
+          {
+            title: 'This is something',
+            body: 'Yup, this is vue within Hugo'
+          },{
+            title: 'This is something part 2',
+            body: 'Yup, this is vue within Hugo!'
+          },{
+            title: 'This is something part 3',
+            body: 'Yup, this is vue within Hugo!?'
+          }
+        ]
+      },
+      methods: {
+        surprise: function() {
+          console.log('SURPRISE!!!');
+        }
+      },
+      mounted: function() {
+        console.log('component mounted!!!');
+      }
+    })
+  </script>
+
 {{ end }}
