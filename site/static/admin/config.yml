@@ -17,7 +17,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Mood", name: "mood", widget: "select", required: false, "options": ["Happy", "Sad", "Melancholy", "Shocked", "Surprised"]}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "listing"
-    label: "Post"
+    label: "Listing"
     folder: "site/content/listing"
     create: true
     fields:
