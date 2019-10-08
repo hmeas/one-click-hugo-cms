@@ -9,6 +9,14 @@
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
       <p>Read in {{ .ReadingTime }} minutes</p>
     </div>
+    <div class="flex justify-between grey-3">
+      <p>
+        My Mood: 
+        {{ if .Params.mood }}
+          {{ .Params.mood }}
+        {{ end }}
+      </p>
+    </div>
     <div class="cms mw6">
       <p>{{ .Description }}</p>
       {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
@@ -19,15 +27,15 @@
 
     <h1>RENDERED VIA VUE:</h1>
 
-    <h1 class="f2 lh-title b mb3">{{ "{{hugo.Title}}" }}</h1>
+    <h1 class="f2 lh-title b mb3">{{ "{{CMS.Title}}" }}</h1>
     <div class="flex justify-between grey-3">
       <p>{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p>Read in {{ "{{hugo.ReadingTime}}" }} minutes</p>
+      <p>Read in {{ "{{CMS.ReadingTime}}" }} minutes</p>
     </div>
     <div class="cms mw6">
-      <p>{{ "{{hugo.Description}}" }}</p>
-      <img v-if="hugo.Params.image" :src="hugo.Params.image" :alt="hugo.Title" />
-      <span v-html="hugo.Content"></span>
+      <p>{{ "{{CMS.Description}}" }}</p>
+      <img v-if="CMS.Params.image" :src="CMS.Params.image" :alt="CMS.Title" />
+      <span v-html="CMS.Content"></span>
     </div>
 
   </div>
@@ -36,20 +44,7 @@
     var app = new Vue({
       el: '#view-post',
       data: {
-        hugo: {{ . }},
-        testing: 'THIS IS A TEST!',
-        someData: [
-          {
-            title: 'This is something',
-            body: 'Yup, this is vue within Hugo'
-          },{
-            title: 'This is something part 2',
-            body: 'Yup, this is vue within Hugo!'
-          },{
-            title: 'This is something part 3',
-            body: 'Yup, this is vue within Hugo!?'
-          }
-        ]
+        CMS: {{ . }},
       },
       methods: {
         surprise: function() {
