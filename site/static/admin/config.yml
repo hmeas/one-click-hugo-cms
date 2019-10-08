@@ -16,6 +16,17 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Mood", name: "mood", widget: "select", required: false, "options": ["Happy", "Sad", "Melancholy", "Shocked", "Surprised"]}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "listing"
+    label: "Post"
+    folder: "site/content/listing"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Square Feet", name: "square_feet", widget: "number"}
+      - {label: "Active", name: "active", widget: "boolean"}
+      - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+      - {label: "Bathrooms", name: "bathrooms", widget: "number"}
   - name: "pages"
     label: "Pages"
     files:
