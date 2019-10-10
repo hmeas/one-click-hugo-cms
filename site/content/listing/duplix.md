@@ -1,10 +1,12 @@
 ---
-title: Duplex
-price: 1795
-square_feet: 570
+title: 3 Bedroom 3 Bath
+type: 3_bed
+price: 2300
+square_feet: 1300
 active: true
-bedrooms: 1
-bathrooms: 1
+bedrooms: 3
+bathrooms: 3
+image: /img/home3.jpg
 ---
 Nah, I just don't think I'm cut out for music. Now, Biff, um, can I assume that your insurance is gonna pay for the damage? Right. Lou, gimme a milk, chocolate. Lorraine, my density has popped me to you. Hey, Doc? Doc. Hello, anybody home? Einstein, come here, boy. What's going on? Wha- aw, god. Aw, Jesus. Whoa, rock and roll. Yo Stop it.
 
