@@ -1,10 +1,12 @@
 ---
-title: Beautiful Home
-price: 2995
-square_feet: 1215
+title: Apartment
+type: studio
+price: 1200
+square_feet: 600
 active: true
-bedrooms: 3
-bathrooms: 2
+bedrooms: 0
+bathrooms: 1
+image: /img/269b30abb5c3547617c450ab1ca0babf.webp
 ---
 Sam, here's the young man you hit with your car out there. He's alright, thank god. So tell me, future boy, who's president of the United States in 1985? You cost three-hundred buck damage to my car, you son-of-a-bitch. And I'm gonna take it out of your ass. Hold him. No. Uh, yeah.
 
