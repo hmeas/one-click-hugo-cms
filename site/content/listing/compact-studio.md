@@ -1,10 +1,12 @@
 ---
-title: Compact Studio
-price: 1200
-square_feet: 560
+title: 2 Bedroom 2 Bath
+type: 2_bed
+price: 1995
+square_feet: 1060
 active: true
-bedrooms: 0
-bathrooms: 1
+bedrooms: 2
+bathrooms: 2
+image: /img/home1.jpg
 ---
 What, what, ma? Hey not too early I sleep in Sunday's, hey McFly, you're shoe's untied, don't be so gullible, McFly. Why not? Indeed I will, roll em. I, Doctor Emmett Brown, am about to embark on an historic journey. What have I been thinking of, I almost forgot to bring some extra plutonium. How did I ever expect to get back, one pallet one trip I must be out of my mind. What is it Einy? Oh my god, they found me, I don't know how but they found me. Run for it, Marty. Say that again.
 
